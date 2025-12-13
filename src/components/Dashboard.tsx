@@ -1,7 +1,34 @@
+import { useState } from "react";
+import styles from "./Dasboard.module.css";
+
+const currencies = ["USD", "EUR", "GBP", "INR"];
+
 const Dashboard = () => {
+    const [selectedCurrency, setSelectedCurrency] = useState<string>("USD");
+
   return (
-    <div>
-        <h1>Dashboard</h1>
+    <div className={styles.dashboard}>
+        <div className={styles.header}>
+            <h1 className={styles.title}>Dashboard</h1>
+            <div className={styles.headerRow}>
+                <p className={styles.subtitle}>
+                    Overview of our financial data
+                </p>
+                <select
+                    name="Currency Selector"
+                    id="currencySelector"
+                    value={selectedCurrency}
+                    onChange={(e) => setSelectedCurrency(e.target.value)}
+                    className={styles.currencySelector}
+                    >
+                    {currencies.map((eachCurrency) => (
+                    <option key={eachCurrency} value={eachCurrency}>
+                        {eachCurrency}
+                    </option>
+                    ))}
+                </select>
+            </div>
+        </div>
     </div>
   )
 }
