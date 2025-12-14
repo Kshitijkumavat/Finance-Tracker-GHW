@@ -1,11 +1,12 @@
-import { useEffect, useState } from "react";
-import { useTransactionsStore } from "../../store/transactionsStore";
-import { useAccountsStore } from "../../store/accountsStore";
-import { useCategoriesStore } from "../../store/categoriesStore";
-// import TimeSeriesChart, { type TimePoint } from "../charts/TimeSeriesChart";
-// import CategoryChart, { type CategoryPoint } from "../charts/CategoryChart";
-// import { groupByCategory } from "../../utils/aggregations";
+import { useEffect, useState } from 'react';
+import { useTransactionsStore } from '../../store/transactionsStore';
+import { useAccountsStore } from '../../store/accountsStore';
+import { useCategoriesStore } from '../../store/categoriesStore';
 import styles from "./Dashboard.module.css";
+// import TimeSeriesChart, { type TimePoint } from '../charts/TimeSeriesChart';
+// import CategoryChart, { type CategoryPoint } from '../charts/CategoryChart';
+// import { groupByCategory } from '../../utils/aggregations';
+
 
 // type TimePoint = { time: string; value: number };
 // type CategoryPoint = { category: string; value: number };
